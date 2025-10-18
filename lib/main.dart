@@ -1,3 +1,4 @@
+import 'package:burc_rehberi/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'burc_listesi.dart';
 
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.pink),
-      home: BurcListesi(),
+     //  home: BurcListesi(), // route_generator dosyasını kullandığımız için yoruma aldım
+    onGenerateRoute: RouteGenerator.routeGenerator,
     );
   }
 }
